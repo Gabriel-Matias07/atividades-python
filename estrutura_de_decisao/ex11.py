@@ -9,3 +9,26 @@
 # o percentual de aumento aplicado;
 # o valor do aumento;
 # o novo salário, após o aumento.
+
+salario_colaborador = float(input("Digite o valor do seu salário: "))
+antes_reajuste = salario_colaborador
+
+if salario_colaborador <= 280.00:
+    percentual = (20/100)
+    salario_colaborador += percentual * salario_colaborador
+elif salario_colaborador > 280.00 and salario_colaborador < 700.00:
+    percentual = (15/100)
+    salario_colaborador += percentual * salario_colaborador
+elif salario_colaborador > 700.00 and salario_colaborador < 1500.00:
+    percentual = (10/100)
+    salario_colaborador += percentual * salario_colaborador
+elif salario_colaborador > 1500.00:
+    percentual = (5/100)
+    salario_colaborador += percentual * salario_colaborador
+else:
+    print("Entrada inválida!")
+
+print(f"Salário antes do reajuste: R${antes_reajuste}")
+print(f"Percentual aplicado: {int(percentual * 100)}%")
+print(f"Valor de aumento: R${percentual * antes_reajuste}")
+print(f"Novo salário: R${salario_colaborador}")
