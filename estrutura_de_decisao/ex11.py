@@ -14,21 +14,19 @@ salario_colaborador = float(input("Digite o valor do seu salário: "))
 antes_reajuste = salario_colaborador
 
 if salario_colaborador <= 280.00:
-    percentual = (20/100)
-    salario_colaborador += percentual * salario_colaborador
+    percentual = 20
 elif salario_colaborador > 280.00 and salario_colaborador < 700.00:
-    percentual = (15/100)
-    salario_colaborador += percentual * salario_colaborador
+    percentual = 15
 elif salario_colaborador > 700.00 and salario_colaborador < 1500.00:
-    percentual = (10/100)
-    salario_colaborador += percentual * salario_colaborador
+    percentual = 10
 elif salario_colaborador > 1500.00:
-    percentual = (5/100)
-    salario_colaborador += percentual * salario_colaborador
+    percentual = 5
 else:
     print("Entrada inválida!")
 
-print(f"Salário antes do reajuste: R${antes_reajuste}")
-print(f"Percentual aplicado: {int(percentual * 100)}%")
-print(f"Valor de aumento: R${percentual * antes_reajuste}")
-print(f"Novo salário: R${salario_colaborador}")
+salario_colaborador += (percentual/100) * salario_colaborador
+
+print(f"Salário antes do reajuste: R${antes_reajuste:.2f}")
+print(f"Percentual aplicado: {percentual}%")
+print(f"Valor de aumento: R${(percentual / 100) * antes_reajuste:.2f}")
+print(f"Novo salário: R${salario_colaborador:.2f}")
