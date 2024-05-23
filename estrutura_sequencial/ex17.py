@@ -6,22 +6,16 @@
 import math
 
 tamanho_area = float(input("Digite o tamanho da área em m²: "))
-
 quantidade_litros = tamanho_area / 6 * 1.10
 print(f"Serão necessários {quantidade_litros:.2f} litros de tinta com 10% de folga.")
-
 quantidade_latas = math.ceil(quantidade_litros / 18)
 preco_latas = quantidade_latas * 80.00
 print(f"Ao comprar apenas latas de 18 litros, você precisará de {quantidade_latas} latas e pagará R$ {preco_latas:.2f}.")
-
 quantidade_galoes = math.ceil(quantidade_litros / 3.6)
 preco_galoes = quantidade_galoes * 25.00
 print(f"Ao comprar apenas galões de 3,6 litros, você precisará de {quantidade_galoes} galões e pagará R$ {preco_galoes:.2f}.")
-
 latas_necessarias = quantidade_litros // 18
 litros_restantes = quantidade_litros % 18
 galoes_necessarios = math.ceil(litros_restantes / 3.6)
-
 preco_misto = (latas_necessarias * 80.00) + (galoes_necessarios * 25.00)
-
 print(f"Para minimizar o desperdício, você precisará de {int(latas_necessarias)} latas e {galoes_necessarios} galões, e pagará R$ {preco_misto:.2f}.")
