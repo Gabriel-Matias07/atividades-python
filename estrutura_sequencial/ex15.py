@@ -15,14 +15,12 @@
 
 ganho_hora = float(input("Quanto você ganha por hora trabalhada? "))
 horas_tabalhadas_mes = float(input("Quantas horas você trabalha por mês? "))
-
 salario_bruto = (ganho_hora * horas_tabalhadas_mes)
 imposto_renda = (11/100 * salario_bruto)
 inss = (8/100 * salario_bruto)
 sindicato = (5/100 * salario_bruto)
 descontos = (imposto_renda + inss + sindicato)
 salario_liquido = (salario_bruto - descontos)
-
 print(f"Salário Bruto: R$ {salario_bruto:.2f}")
 print(f"Quanto pagou ao INSS: R$ {inss:.2f}")
 print(f"Quanto pagou ao sindicato: R$ {sindicato:.2f}")
