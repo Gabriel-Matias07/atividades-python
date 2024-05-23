@@ -3,15 +3,11 @@
 peso_maximo = 50
 excesso = 0
 valor_multa = 4.00
-
 peso_peixe = float(input("Digite o peso do seu peixe em kg: "))
 print("\n")
-
 if peso_maximo < peso_peixe:
     excesso = peso_peixe - peso_maximo
-
     calc = excesso * valor_multa
-
     print("-------Dados do Programa-------\n")
     print(f"Peso do Peixe: {peso_peixe}kg.\n")
     print(f"Excesso: {excesso}kg.\n")
