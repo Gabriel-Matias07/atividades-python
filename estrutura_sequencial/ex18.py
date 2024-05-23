@@ -2,10 +2,8 @@
 
 tempo = 60 #Const
 bits = 8 #Const
-
 tamanho_arquivo = float(input("Digite o tamanho do arquivo (em MB): "))
 velocidade_link = float(input("Digite a velocidade da sua internet (em Mbps): "))
-
 tempo_download = (tamanho_arquivo * bits) / velocidade_link
 tempo_download_minutos = tempo_download / tempo #Tempo de download em minutos
 print(f"Levará aproximadamente {tempo_download_minutos:.2f} minutos para o seu arquivo de {tamanho_arquivo}MB ser baixado com velocidade de internet de {velocidade_link}Mbps.")
