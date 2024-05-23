@@ -2,6 +2,5 @@
 
 ganho_por_hora = float(input("Quanto você ganha por hora? "))
 horas_trabalhadas = float(input("Quantas horas você trabalha no mês? "))
-
 calc_mes = float(ganho_por_hora * horas_trabalhadas)
 print(f"Você ganha R${calc_mes} por mês!")
